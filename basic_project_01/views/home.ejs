@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bloggers | <%= title%></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <h1 class="heading">Bloggerz</h1>
+    <p class="subheading">Create, Read and Blog</p>
+
+    <h3>Blogs</h3>
+    <div class="blogs">
+      <% if(blogs.length > 0) { %> <% blogs.forEach((blog) => { %>
+      <div class="blog">
+        <a class="singleBlog" href="/blogs/<%= blog._id%>">
+          <h3 class="blog-title"><%= blog.title %></h3>
+        </a>
+        <p class="author">By: <%= blog.author %></p>
+        <p class="blog-body"><%= blog.blogContent %></p>
+      </div>
+      <% }) %> <% } else { %>
+      <p>No blogs are there !</p>
+      <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

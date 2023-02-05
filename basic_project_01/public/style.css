@@ -1,0 +1,137 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  font-weight: bolder;
+  color: rgb(101, 101, 101);
+  margin-left: 5rem;
+}
+
+.heading {
+  color: rgb(207, 135, 0);
+  margin-top: 2rem;
+}
+.subheading {
+  margin-top: 0.5rem;
+  color: gray;
+}
+
+.blogs {
+  margin-top: 2rem;
+}
+
+.blog {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-left: 10px solid orangered;
+}
+
+.blog-title {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  color: rgb(186, 121, 0);
+}
+
+.blog-body {
+  background-color: rgb(241, 241, 241);
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.author {
+  margin: 0;
+  width: fit-content;
+  color: black;
+  border-radius: 10rem;
+  margin: 0;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  margin-top: auto;
+}
+
+footer p {
+  text-align: center;
+}
+
+footer .list {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  list-style: none;
+  gap: 1rem;
+}
+
+footer a {
+  color: #969696;
+  text-decoration: none;
+}
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+
+form label {
+  font-weight: thin;
+  color: gray;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+form button {
+  margin-top: 1rem;
+  color: wheat;
+  padding: 0.5rem;
+  background-color: rgb(64, 64, 91);
+  border: 0;
+  border-radius: 10rem;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  border: 0;
+  height: 2.5rem;
+  width: 7rem;
+  border-radius: 10rem;
+  cursor: pointer;
+}

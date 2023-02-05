@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bloggers | <%= title%></title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <h1 class="heading">Bloggerz</h1>
+    <p class="subheading">Create, Read and Blog</p>
+
+    <h3>Blog</h3>
+
+    <div class="blog">
+      <h3 class="blog-title"><%= blog.title %></h3>
+      <p class="author">By: <%= blog.author %></p>
+      <p class="blog-body"><%= blog.blogContent %></p>
+      <a class="delete delete-btn" data-doc="<%= blog._id %>"> Delete </a>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+
+  <script>
+    const deleteElm = document.querySelector("a.delete");
+    deleteElm.addEventListener("click", (e) => {
+      const endpoint = `/blogs/${deleteElm.dataset.doc}`;
+      console.log(`${deleteElm.dataset.doc}`);
+      console.log(endpoint);
+      fetch(endpoint, {
+        method: "DELETE",
+      })
+        .then((response) => response.json())
+        .then((data) => (window.location.href = data.redirect))
+        .catch((error) => console.log(error.message));
+    });
+  </script>
+</html>
