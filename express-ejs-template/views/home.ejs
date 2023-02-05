@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bloggers | <%= title%></title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(101, 101, 101);
+        margin-left: 5rem;
+      }
+
+      .heading {
+        color: rgb(207, 135, 0);
+        margin-top: 2rem;
+      }
+      .subheading {
+        margin-top: 0.5rem;
+        color: gray;
+      }
+
+      .blogs {
+        margin-top: 2rem;
+      }
+
+      .blog {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0.5rem;
+        width: 100%;
+        border-radius: 0.7rem;
+      }
+
+      .blog-title {
+        font-size: 3rem;
+        font-weight: 400;
+        margin: 0;
+        color: rgb(186, 121, 0);
+      }
+
+      .author {
+        margin: 0;
+        width: fit-content;
+        color: black;
+        border-radius: 10rem;
+        margin: 0;
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+        margin-top: auto;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      footer .list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 1rem;
+      }
+
+      footer a {
+        color: #969696;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./partials/navbar.ejs') %>
+
+    <h1 class="heading">Bloggerz</h1>
+    <p class="subheading">Create, Read and Blog</p>
+
+    <h3>Blogs</h3>
+    <div class="blogs">
+      <% if(blogs.length > 0) { %> <% blogs.forEach((blog) => { %>
+      <div class="blog">
+        <h3 class="blog-title"><%= blog.title %></h3>
+        <p class="author">By: <%= blog.author %></p>
+        <p class="blog-body"><%= blog.blogBody %></p>
+      </div>
+      <% }) %> <% } else { %>
+      <p>No blogs are there !</p>
+      <% } %>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

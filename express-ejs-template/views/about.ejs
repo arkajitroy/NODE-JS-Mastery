@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bloggers | <%= title%></title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(101, 101, 101);
+        margin-left: 5rem;
+      }
+
+      .heading {
+        color: rgb(207, 135, 0);
+        margin-top: 2rem;
+      }
+
+      .subheading {
+        margin-top: 0.5rem;
+        color: gray;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      footer .list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 1rem;
+      }
+
+      footer a {
+        color: #969696;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/">Homepage</a>
+      <a href="/about">About</a>
+    </nav>
+    <h1 class="heading">About</h1>
+    <p class="subheading">
+      A blog page is a section of a website where a blogger or author regularly
+      posts articles or written content, usually on a specific topic or theme.
+      It is typically used for personal expression, sharing opinions and ideas,
+      or as a platform for discussions and debates. A blog page usually includes
+      the post title, a header image, the author's name and bio, categories and
+      tags for organizing content, and the ability for readers to leave comments
+      and engage in conversation. The layout and design of a blog page can vary
+      greatly, but it is often clean and simple, with an emphasis on the written
+      content.
+    </p>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bloggers | <%= title%></title>
+    <style>
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .navbar {
+        display: flex;
+        justify-content: center;
+      }
+
+      .navbar a {
+        text-decoration: none;
+        font-weight: bolder;
+        color: rgb(101, 101, 101);
+        margin-left: 5rem;
+      }
+
+      .heading {
+        color: rgb(207, 135, 0);
+        margin-top: 2rem;
+      }
+      .subheading {
+        margin-top: 0.5rem;
+        color: gray;
+      }
+
+      .blogs {
+        margin-top: 2rem;
+      }
+
+      form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+      }
+
+      form label {
+        font-weight: thin;
+        color: gray;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      form button {
+        margin-top: 1rem;
+        color: wheat;
+        padding: 0.5rem;
+        background-color: rgb(64, 64, 91);
+        border: 0;
+        border-radius: 10rem;
+      }
+
+      .form-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      footer {
+        margin-top: auto;
+        background-color: #333;
+        color: #fff;
+        padding: 1em;
+      }
+
+      footer p {
+        text-align: center;
+      }
+
+      footer .list {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 1rem;
+      }
+
+      footer a {
+        color: #969696;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="/">Homepage</a>
+      <a href="/about">About</a>
+    </nav>
+    <h1 class="heading">Bloggerz</h1>
+    <p class="subheading">Create, Read and Blog</p>
+
+    <div class="form-container">
+      <form action="">
+        <label for="title">Blog Title</label>
+        <input type="text" id="title" required />
+
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" required />
+
+        <label for="body">Blog Content</label>
+        <textarea id="title" name="" id="" cols="70" rows="5"></textarea>
+
+        <button>Submit</button>
+      </form>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+  </body>
+</html>
